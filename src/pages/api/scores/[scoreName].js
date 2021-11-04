@@ -4,16 +4,15 @@ import database from "../../../../database/run-db.js";
 export default (req, res) => {
   const httpMethod = req.method;
   const { scoreName } = req.query;
+  const { name, score } = req.body;
 
   switch (httpMethod) {
     case "GET":
-      const score = database.get(
+      const dbScore = database.get(
         sql`SELECT * FROM "scores" WHERE "name" = ${scoreName}`
       );
-      console.log(scoreName);
-      console.log(score);
-      if (score) {
-        res.status(200).json(score);
+      if (dbScore) {
+        res.status(200).json(dbScore);
       } else {
         res
           .status(404)
@@ -21,8 +20,24 @@ export default (req, res) => {
       }
       break;
     case "PATCH":
-      const payload = { name: "home", score: 1 };
-      res.status(200).json(payload);
+      const oldDbScore = database.get(
+        sql`SELECT * FROM "scores" WHERE "name" = ${scoreName}`
+      );
+      if (oldDbScore) {
+        const payload = {
+          name: name,
+          score: score,
+        };
+
+        database.run(
+          sql`UPDATE "scores" SET "score" = ${score} WHERE "name" = ${scoreName}`
+        );
+        res.status(200).json(payload);
+      } else {
+        res
+          .status(404)
+          .json({ message: `endpoint (${scoreName}) score not found` });
+      }
       break;
     default:
       res.setHeader("Allow", ["GET", "PATCH"]);
