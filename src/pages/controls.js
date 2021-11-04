@@ -1,14 +1,15 @@
-import ControlButtons from "../components/controlButtons";
+import ControlButtons from "../components/controlbuttons";
+import styles from "../styles/Controls.module.scss";
 
 const ControlsPage = () => {
   return (
     <>
       <h1>Controls</h1>
-      <div className="controls">
-        <div className="controlBoard">
+      <div className={styles.controls}>
+        <div className={styles.controlButtons}>
           <ControlButtons endpoint="home" />
         </div>
-        <div className="controlBoard">
+        <div className={styles.controlButtons}>
           <ControlButtons endpoint="away" />
         </div>
       </div>
