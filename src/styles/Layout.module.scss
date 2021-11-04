@@ -1,13 +1,17 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  background: rgb(78, 78, 78);
+  /* margin: 1rem; */
+}
+.navbar {
+  padding: 1rem;
+  color: gold;
+  font-weight: bold;
 }
