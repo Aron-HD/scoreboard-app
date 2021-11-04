@@ -3,7 +3,20 @@
   color: white;
   padding: 1rem;
   border-radius: 25px;
-  min-width: 290px;
+  min-width: 400px;
+  min-height: 250px;
+  &:hover {
+    .scores .score span {
+      box-shadow: 0 0 5px 2px #fff, 0 0 10px 5px yellow, 0 0 15px 10px yellow;
+      transition: all ease-in 1s;
+    }
+  }
+  .underscore {
+    height: 0.5px;
+    border-radius: 45%;
+    background: cornsilk;
+    box-shadow: 0 0 2px 1px yellow, 0 0 5px 2px cornsilk;
+  }
   .scores {
     display: flex;
     flex-direction: row;
@@ -15,9 +28,19 @@
       flex-direction: column;
       margin: 1rem;
       span {
-        font-size: xx-large;
+        background: darkslategray;
+        font-size: 56px;
+        font-weight: bold;
+        color: yellow;
+        border-radius: 25px;
+        border: 0.1px solid rgb(61, 61, 61);
         padding: 1rem 2rem;
+        min-width: 130px;
+        box-shadow: 0 0 2px 1.5px rgb(61, 61, 61), 0 0 7px 2px rgb(61, 61, 61);
       }
     }
   }
+  -webkit-box-shadow: 0 4px 8px -6px black;
+  -moz-box-shadow: 0 4px 8px -6px black;
+  box-shadow: 0 4px 8px -3px black;
 }
