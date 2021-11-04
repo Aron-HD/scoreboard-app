@@ -1,6 +1,20 @@
+import { useHomeContext } from "../context/homeState";
+import { useAwayContext } from "../context/awayState";
+
 const ControlButtons = ({ endpoint }) => {
   // home or away endpoint
   const uri = `/api/scores/${endpoint}`;
+
+  const { away, setAway } = useAwayContext();
+  const { home, setHome } = useHomeContext();
+
+  const setScore = (newScore) => {
+    return endpoint === "home"
+      ? setHome(newScore)
+      : endpoint === "away"
+      ? setAway(newScore)
+      : null;
+  };
 
   const updateScore = (scoreName, scoreInc) => {
     const reqPayload = {
@@ -24,7 +38,7 @@ const ControlButtons = ({ endpoint }) => {
     }
   };
 
-  const score = 0;
+  const score = endpoint === "home" ? home : endpoint === "away" ? away : null;
 
   return (
     <>
