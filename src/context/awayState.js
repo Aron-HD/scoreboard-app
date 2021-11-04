@@ -1,4 +1,8 @@
+import { BroadcastChannel } from "broadcast-channel";
 import { createContext, useContext, useState, useEffect } from "react";
+
+// Connect to broadcast channel
+const channel = new BroadcastChannel("away");
 
 const AwayContext = createContext();
 
@@ -11,6 +15,8 @@ export function AwayWrapper({ children }) {
       const fetchScore = await fetch(endpoint);
       const scoreData = await fetchScore.json();
       setAway(scoreData.score);
+      // broadcast the updated score to scoreboard
+      channel.postMessage(scoreData.score);
     }
     getScore();
   });
