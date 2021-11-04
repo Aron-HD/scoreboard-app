@@ -1,0 +1,23 @@
+.scoreboard {
+  background: rgb(78, 78, 78);
+  color: white;
+  padding: 1rem;
+  border-radius: 25px;
+  min-width: 290px;
+  .scores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+    .score {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+      span {
+        font-size: xx-large;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
