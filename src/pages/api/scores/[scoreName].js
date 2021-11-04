@@ -33,6 +33,7 @@ export default (req, res) => {
           sql`UPDATE "scores" SET "score" = ${score} WHERE "name" = ${scoreName}`
         );
         res.status(200).json(payload);
+        console.log(oldDbScore);
       } else {
         res
           .status(404)
