@@ -26,15 +26,23 @@
       box-sizing: border-box;
       text-decoration: none;
       font-weight: bold;
+      font-size: large;
       text-align: center;
       transition: all 0.2s;
       cursor: pointer;
       background: darkslategrey;
-      color: gold;
+      color: white;
       &:hover {
         color: darkslategrey;
         background-color: gold;
       }
     }
   }
+}
+.controls,
+.controlButtons,
+.controlButtons button {
+  -webkit-box-shadow: 0 4px 8px -6px black;
+  -moz-box-shadow: 0 4px 8px -6px black;
+  box-shadow: 0 4px 8px -3px black;
 }
