@@ -1,11 +1,17 @@
 import Layout from "../components/layout";
+import { AwayWrapper } from "../context/awayState";
+import { HomeWrapper } from "../context/homeState";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <HomeWrapper>
+      <AwayWrapper>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AwayWrapper>
+    </HomeWrapper>
   );
 }
 
