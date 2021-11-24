@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## The Scope 
 
-## Getting Started
+Produce a scoreboard display consisting of 2 teams (home/away) and their respective scores. The  solution should consist of 2 user interface parts. The scoreboard page which should show each teams  current score and should update when the scores have been adjusted, upon loading the scores  should be populated from a data store. The score control page should allow the user to increase,  decrease and reset each teams score. All data should be persisted in a local data store and the  scores should update on the scoreboard page within 3 seconds of the scores being adjusted on the  score control page. 
 
-First, run the development server:
+## Technical Requirements 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The solution must be produced as a web application consisting of client and server components. Feel  free to use which ever technology stacks you are comfortable using. You can use any open source  libraries that you feel are required to complete the solution. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Completion Criteria 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Working on the task should not exceed more than 2 hours to produce a working solution. The solution  should be complete in functionality and tested to the best of your abilities. 
